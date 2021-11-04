@@ -1,0 +1,129 @@
+:root {
+  --orange-bright: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --darkest-cyan: hsl(179, 100%, 13%);
+  --paragrafos: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.cartao{
+  margin: 20% 0 0 0 ;
+}
+
+.topp{
+  border-radius: 8px 8px 0 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container img {
+  width: 60px;
+  margin: 15% 0 0 10%;
+}
+
+.container p {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: var(--paragrafos);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.titulo {
+  font-family: "Big Shoulders Display", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 5% 0 0 0;
+}
+
+.amarelo {
+  background-color: var(--orange-bright);
+}
+
+.azul {
+  background-color: var(--dark-cyan);
+}
+
+.verde {
+  background-color: var(--darkest-cyan);
+}
+
+.botao {
+  background-color: var(--light-grey);
+  border: none;
+  margin-bottom: 5%;
+  width: 8rem;
+  padding: 1em;
+  margin: 0 0 15% 10%;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:active,
+.botao:hover {
+  background-color: transparent;
+  border: 3px solid var(--light-grey);
+  color: var(--light-grey);
+}
+
+.amarelo-bot {
+  color: var(--orange-bright);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  .cartao {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: ' . sedans suvs luxury . ';
+  }
+
+  .container {
+    width: 100%; 
+  }
+
+  .amarelo{
+    grid-area: sedans;
+  }
+
+  .azul{
+    grid-area: suvs;
+  }
+
+  .verde{
+    grid-area: luxury;
+  }
+
+  .topp{
+    border-radius: 8px 0 0 8px;
+  }
+
+  .ulti{
+    border-radius: 0 8px 8px 0;
+  }
+  
+}
+
+
